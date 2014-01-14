@@ -1,0 +1,1 @@
+MarvinVMBuilder buildOnJenkins: 'linux'. 

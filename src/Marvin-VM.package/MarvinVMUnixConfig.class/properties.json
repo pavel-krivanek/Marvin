@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PharoSUnixConfig",
+	"category" : "Marvin-VM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinVMUnixConfig",
+	"type" : "normal"
+}

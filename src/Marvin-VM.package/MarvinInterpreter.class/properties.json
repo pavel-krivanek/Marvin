@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "StackInterpreterPrimitives",
+	"category" : "Marvin-VM",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"ClassPrototype",
+		"SackSize"
+	],
+	"instvars" : [
+		"sack",
+		"sackPosition"
+	],
+	"name" : "MarvinInterpreter",
+	"type" : "normal"
+}
