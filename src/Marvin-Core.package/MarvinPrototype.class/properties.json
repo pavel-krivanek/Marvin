@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "pk 4/26/2005 21:12",
+	"super" : "Object",
+	"category" : "Marvin-Core",
+	"classinstvars" : [
+		"lobby"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinPrototype",
+	"type" : "variable"
+}

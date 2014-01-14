@@ -1,0 +1,2 @@
+MarvinPrototype bePrototype.
+MarvinPrototype prototypeClass .
