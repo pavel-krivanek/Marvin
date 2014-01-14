@@ -1,0 +1,4 @@
+accessing
+isMethodLiteral
+
+	^ true

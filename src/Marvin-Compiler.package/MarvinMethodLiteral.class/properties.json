@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinLiteral",
+	"category" : "Marvin-Compiler-Literals",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slots",
+		"context"
+	],
+	"name" : "MarvinMethodLiteral",
+	"type" : "normal"
+}

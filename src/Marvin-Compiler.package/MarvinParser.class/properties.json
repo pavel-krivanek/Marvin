@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "SmaCCParser",
+	"category" : "Marvin-Compiler",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"contexts"
+	],
+	"name" : "MarvinParser",
+	"type" : "normal"
+}

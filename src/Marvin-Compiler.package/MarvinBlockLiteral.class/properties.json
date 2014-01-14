@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinMethodLiteral",
+	"category" : "Marvin-Compiler-Literals",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinBlockLiteral",
+	"type" : "normal"
+}
