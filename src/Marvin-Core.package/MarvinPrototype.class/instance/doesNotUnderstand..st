@@ -1,4 +1,10 @@
-as yet unclassified
+reflective operations
 doesNotUnderstand: aMessage 
 
-	^ self slotNotFound: aMessage 
+	| result |
+	
+	result := self performMessage: aMessage inContextOf: self.
+	
+	^ result == #DNU 
+		ifTrue: [ self slotNotFound: aMessage. ]
+		ifFalse: [ result ]

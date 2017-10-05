@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "pk 4/26/2005 21:12",
-	"super" : "Object",
+	"commentStamp" : "PavelKrivanek 9/26/2017 13:53",
+	"super" : "MarvinPrototypeSuperclass",
 	"category" : "Marvin-Core",
 	"classinstvars" : [
 		"lobby"
