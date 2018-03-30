@@ -1,7 +1,7 @@
 as yet unclassified
 slotNotFound: aMessage
 
-	MarvinSlotNotFound new 
+	MessageNotUnderstood new 
 		message: aMessage;
 		receiver: self;
 		signal.

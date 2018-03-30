@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"parent",
 		"object"
 	],
-	"name" : "MarvinPrototypeTest",
+	"name" : "MarvinPrototypeDelegationTest",
 	"type" : "normal"
 }

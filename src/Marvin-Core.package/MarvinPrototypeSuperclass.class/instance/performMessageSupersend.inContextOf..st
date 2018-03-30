@@ -7,7 +7,7 @@ performMessageSupersend: aMessage inContextOf: anObject
 
 	index := 1.
 
-	[ (self at: index) = nil ]
+	[ (self at: index) == nil ]
 			whileFalse: [
 				| parent resultFromParent |
 				parent := self at: index+2.

@@ -8,7 +8,7 @@ performMessage: aMessage inContextOf: anObject
 	index := 1.
 	
 	" process parent slots as messgaes "
-	[ (currentSlot := self at: index) = nil ]
+	[ (currentSlot := self at: index) == nil ]
 		whileFalse: [ 
 			" read message "
 			(currentSlot = messageSelector) 
@@ -50,7 +50,7 @@ performMessage: aMessage inContextOf: anObject
 				ifTrue: [ 
 					" write value to slot "
 					self at: index + 2 put: aMessage argument.
-					^ self ] .
+					^ anObject ] .
 			index := index + 3 ].
 		
 	index := 1.

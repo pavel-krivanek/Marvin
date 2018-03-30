@@ -58,7 +58,7 @@ RemoveSlot: slotName
 					a := a+3. 
 					b := b +3.] ].
 
-	found ifFalse: [ self error: 'Slot not found' ].
+	found ifFalse: [ MarvinSlotNotFound signal ].
 
 	self become: (MarvinPrototype withAll: (newPrototype first: b)).
 

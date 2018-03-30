@@ -1,5 +1,4 @@
 tests
-testEmpty
+testDelegateEmpty
 
 	self should: [ object data ] raise: MessageNotUnderstood. 
-	
