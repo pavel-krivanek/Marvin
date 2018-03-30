@@ -21,7 +21,7 @@ performMessage: aMessage inContextOf: anObject
 				ifTrue: [ 
 					" write value to slot "
 					self at: index + 2 put: aMessage argument.
-					^ self ] .
+					^ anObject ] .
 			index := index + 3 ].
 
 	index := index + 1.
