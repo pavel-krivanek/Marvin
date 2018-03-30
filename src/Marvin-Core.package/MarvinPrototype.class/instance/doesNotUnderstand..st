@@ -5,6 +5,6 @@ doesNotUnderstand: aMessage
 	
 	result := self performMessage: aMessage inContextOf: self.
 	
-	^ result == #DNU 
+	^ result == MarvinPrototype DNU 
 		ifTrue: [ self slotNotFound: aMessage. ]
 		ifFalse: [ result ]

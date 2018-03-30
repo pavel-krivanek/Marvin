@@ -5,6 +5,6 @@ doesNotUnderstand: aMessage
 	owningObject := thisContext sender method propertyAt: #owningObject.
 	result := owningObject performMessageSupersend: aMessage inContextOf: self.
 	
-	^ result == #DNU 
+	^ result == MarvinPrototype DNU
 		ifTrue: [ self slotNotFound: aMessage. ]
 		ifFalse: [ result ]

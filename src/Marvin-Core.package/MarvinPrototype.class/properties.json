@@ -3,7 +3,8 @@
 	"super" : "MarvinPrototypeSuperclass",
 	"category" : "Marvin-Core",
 	"classinstvars" : [
-		"lobby"
+		"lobby",
+		"DNU"
 	],
 	"pools" : [ ],
 	"classvars" : [ ],

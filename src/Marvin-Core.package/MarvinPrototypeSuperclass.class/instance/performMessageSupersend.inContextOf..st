@@ -12,10 +12,10 @@ performMessageSupersend: aMessage inContextOf: anObject
 				| parent resultFromParent |
 				parent := self at: index+2.
 				resultFromParent := parent performMessage: aMessage inContextOf: anObject.
-				resultFromParent ~= #DNU
+				resultFromParent ~= MarvinPrototype DNU
 					ifTrue: [ ^ resultFromParent ].
 				index := index + 3 ].
 	
-	^ #DNU
+	^ MarvinPrototype DNU
 
 
