@@ -1,3 +1,3 @@
 generated-reduction actions
-reduceActionForRepeatXXKeywordCapPart1: nodes
+reduceActionForKeywordCapPart_1: nodes
 	^ OrderedCollection new

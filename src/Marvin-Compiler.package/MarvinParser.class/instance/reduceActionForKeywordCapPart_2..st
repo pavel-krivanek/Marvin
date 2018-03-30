@@ -1,5 +1,5 @@
 generated-reduction actions
-reduceActionForRepeatXXKeywordCapPart2: nodes
+reduceActionForKeywordCapPart_2: nodes
 	^ (nodes at: 1)
 		add: (nodes at: 2);
 		yourself

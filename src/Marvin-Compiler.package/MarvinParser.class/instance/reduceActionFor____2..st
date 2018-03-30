@@ -1,3 +1,3 @@
 generated-reduction actions
-reduceActionForOptionalXXXXX2: nodes
+reduceActionFor____2: nodes
 	^ nodes at: 1

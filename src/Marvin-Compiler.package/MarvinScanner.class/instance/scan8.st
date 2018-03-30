@@ -1,13 +1,11 @@
-generated-scanner
+generated
 scan8
-	[ 
-	self recordMatch: #(11).
+	[ self recordMatch: #(18).
 	self step.
+	currentCharacter == $.
+		ifTrue: [ ^ self scan5 ].
+	currentCharacter == $e
+		ifTrue: [ ^ self scan6 ].
 	(currentCharacter between: $0 and: $9)
-		or: [ (currentCharacter between: $A and: $Z) or: [ currentCharacter = $_ or: [ currentCharacter between: $a and: $z ] ] ] ]
-		whileTrue.
-	currentCharacter = $*
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
-	currentCharacter = $:
-		ifTrue: [ ^ self scan9 ].
+		or: [ currentCharacter between: $A and: $Z ] ] whileTrue.
 	^ self reportLastMatch

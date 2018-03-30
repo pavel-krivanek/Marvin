@@ -1,3 +1,3 @@
-generated-starting states
+generated
 startingStateForStart
-	^1
+	^ 1

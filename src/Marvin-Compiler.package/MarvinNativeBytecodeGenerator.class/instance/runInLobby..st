@@ -7,7 +7,7 @@ runInLobby: method
 
 	lobby RemoveSlot: #DoIt.
 	
-	lobby AddMethodSlot: #DoIt value:  method.
+	lobby AddMethodSlot: #DoIt value: method.
 
 	^ lobby DoIt
 

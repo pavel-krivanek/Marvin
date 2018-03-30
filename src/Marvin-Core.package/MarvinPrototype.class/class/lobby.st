@@ -1,4 +1,4 @@
 as yet unclassified
 lobby
 
-	^ lobby
+	^ lobby ifNil: [ lobby := self createLobby  ]
