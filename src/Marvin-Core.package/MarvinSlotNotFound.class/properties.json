@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MessageNotUnderstood",
+	"category" : "Marvin-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinSlotNotFound",
+	"type" : "variable"
+}
