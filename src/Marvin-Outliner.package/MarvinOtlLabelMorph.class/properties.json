@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"menuAction",
+		"stringMorph"
+	],
+	"name" : "MarvinOtlLabelMorph",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "pk 9/7/2005 22:53",
+	"super" : "BorderedMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"slots"
+	],
+	"name" : "MarvinOutliner",
+	"type" : "normal"
+}

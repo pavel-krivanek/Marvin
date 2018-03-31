@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "EllipseMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinOtlReferenceButton",
+	"type" : "normal"
+}

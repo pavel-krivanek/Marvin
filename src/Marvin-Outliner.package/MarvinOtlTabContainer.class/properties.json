@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PasteUpMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinOtlTabContainer",
+	"type" : "normal"
+}

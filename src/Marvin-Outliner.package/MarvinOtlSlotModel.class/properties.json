@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"str",
+		"protobj"
+	],
+	"name" : "MarvinOtlSlotModel",
+	"type" : "normal"
+}

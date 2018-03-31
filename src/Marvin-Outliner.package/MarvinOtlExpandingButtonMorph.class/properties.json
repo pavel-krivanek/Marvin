@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"state",
+		"expandedForm",
+		"collapsedForm",
+		"toggleAction"
+	],
+	"name" : "MarvinOtlExpandingButtonMorph",
+	"type" : "normal"
+}

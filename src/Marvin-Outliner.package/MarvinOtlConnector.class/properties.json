@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PolygonMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"anchors",
+		"state",
+		"handler"
+	],
+	"name" : "MarvinOtlConnector",
+	"type" : "normal"
+}

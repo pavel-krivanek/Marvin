@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "PasteUpMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"state",
+		"titleMorph",
+		"tabContainer"
+	],
+	"name" : "MarvinOtlExpandingMorphContainer",
+	"type" : "normal"
+}

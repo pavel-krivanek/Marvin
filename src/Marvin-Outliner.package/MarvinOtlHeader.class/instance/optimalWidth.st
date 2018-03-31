@@ -1,0 +1,4 @@
+accessing
+optimalWidth
+
+	^  50 .
