@@ -1,10 +1,10 @@
 as yet unclassified
 title: aTitleMorph
 self halt.
-	title := aTitleMorph.
+	titleMorph := aTitleMorph.
 
 	aTitleMorph outlinerComponent: self.
-	title hResizing: #rigid.
+	titleMorph hResizing: #rigid.
 	
 	self addMorph: aTitleMorph after: container.
 

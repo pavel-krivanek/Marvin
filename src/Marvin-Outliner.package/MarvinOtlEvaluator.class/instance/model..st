@@ -18,8 +18,10 @@ model: anObject
 	resizingMorph position: (editor position x + editor width) 
 				@ (editor position y + editor height).
 	editor addMorph: resizingMorph.
-	resizingMorph outlinerElement: self.
 
-	self addMorph: editor.
+	self addElement: editor.
 
-	self layoutChanged
+	self name: anObject asString.
+	self toggle: state.
+
+	self menuAction: (MessageSend receiver: self selector: #yellowButtonMenu)

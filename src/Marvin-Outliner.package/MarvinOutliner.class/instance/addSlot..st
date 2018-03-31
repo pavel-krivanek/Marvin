@@ -1,6 +1,7 @@
 as yet unclassified
 addSlot: aSlot
 
-	self addComponent: aSlot behind: self evaluator.
+	self addMorph: aSlot behind: evaluator.
+	self adjustWidth.
 
 	

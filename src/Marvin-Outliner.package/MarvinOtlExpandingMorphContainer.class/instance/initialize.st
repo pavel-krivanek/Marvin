@@ -11,10 +11,8 @@ initialize
 	self hResizing: #shrinkWrap.
 	self vResizing: #shrinkWrap.
 
-	titleMorph := MarvinOtlExpandingTitleMorph  new
-		toggleAction: self toggleAction.
-	
-	self addMorph: titleMorph.
+	self addTitle.
+
 	state := #collapsed.
 
 	self enableDrag: false.

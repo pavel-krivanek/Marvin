@@ -12,6 +12,8 @@ initialize
 	self vResizing: #shrinkWrap.
 
 	self enableDrag: false.
+	
+	self title: MarvinOtlComponentTitle new.
 
 	container := MarvinOtlContainer new.
 	self addMorph: container.

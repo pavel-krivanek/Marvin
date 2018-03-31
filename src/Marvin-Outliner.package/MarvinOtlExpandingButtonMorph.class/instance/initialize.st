@@ -3,8 +3,8 @@ initialize
 
 	super initialize.
 
-	expandedForm := self iconNamed: #arrowDown.
-	collapsedForm := self iconNamed: #forward.
+	expandedForm := SimpleHierarchicalListMorph expandedForm.
+	collapsedForm := SimpleHierarchicalListMorph notExpandedForm.
 
 	self extent: 16@16..
 	self collapse.

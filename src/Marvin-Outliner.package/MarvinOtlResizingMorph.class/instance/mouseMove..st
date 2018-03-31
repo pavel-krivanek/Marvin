@@ -8,5 +8,8 @@ mouseMove: evt
 		ifPresentDo: [ :firstClick | 
 			(point dist: firstClick) > 3 
 				ifTrue: [
-					self owner extent: (point x - self owner position x)@ (point y - self owner position y).
-					self move: self toPosition: point. ] ]
+					| newExtent | 
+					newExtent := (point x - self owner position x)@ (point y - self owner position y).
+					newExtent := ((newExtent x max: 100) @ (newExtent y max: 50)).
+					self owner extent: newExtent.
+					self move: self toPosition: owner bottomRight. ] ]

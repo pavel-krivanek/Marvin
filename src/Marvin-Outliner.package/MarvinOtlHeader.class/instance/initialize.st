@@ -12,14 +12,13 @@ initialize
 	self hResizing: #shrinkWrap.
 	self vResizing: #shrinkWrap.
 
-	self addMorph: ('Prototype' asMorph).
+	self addMorph: ('Prototype adfasd fasd fas dfa sdfas dfas df asdf' asMorph).
 
 	evaluatorButton := MarvinOtlHeaderButton new.
 	evaluatorButton action: [ owner evaluator toggle: nil. ].
 	self addMorph: evaluatorButton.
 
-	evaluatorButton := MarvinOtlExpandingButtonMorph  new.
-	self addMorph: evaluatorButton.
+
 
 "	labelMorph := StringMorph new.
 	self addMorph: labelMorph

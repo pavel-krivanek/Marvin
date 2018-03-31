@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "MarvinOtlSlotWithComponents",
+	"super" : "MarvinOtlExpandingMorphContainer",
 	"category" : "Marvin-Outliner",
 	"classinstvars" : [ ],
 	"pools" : [ ],

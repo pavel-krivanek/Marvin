@@ -19,8 +19,8 @@ initialize
 	header := MarvinOtlHeader new.
 	self addMorph: header.
 
-	"evaluator := (MarvinOtlEvaluator new model: 'Evaluator').
-	self addMorph: evaluator."
+	evaluator := (MarvinOtlEvaluator new model: 'Evaluator').
+	self addMorph: evaluator.
 	self adjustWidth.
 
 	

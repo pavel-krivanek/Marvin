@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "MarvinOtlContainer",
+	"super" : "MarvinOtlExpandingMorphContainer",
 	"category" : "Marvin-Outliner",
 	"classinstvars" : [ ],
 	"pools" : [ ],
