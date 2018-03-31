@@ -102,14 +102,14 @@ ParentSlotName:
 	
 ParentSlot :
 	ParentSlotName													{ #parentSlot: } 
-|	ParentSlotName ""="" ""["" Expression ""]""								{ #parentSlot: }
-|	ParentSlotName ""<-"" ""["" Expression ""]""								{ #parentSlot: }  
+|	ParentSlotName ""="" Expression								{ #parentSlot: }
+|	ParentSlotName ""<-"" Expression 								{ #parentSlot: }  
 	;
 
 DataSlot :
 	SlotName														{ #dataSlot: } 
-|	SlotName ""="" ""["" Expression ""]""										{ #dataSlot: }
-|	SlotName ""<-"" ""["" Expression ""]""									{ #dataSlot: }  
+|	SlotName ""="" Expression										{ #dataSlot: }
+|	SlotName ""<-"" Expression								{ #dataSlot: }  
 	;
 	
 UnarySlot :
@@ -184,10 +184,10 @@ RegularObject :
 	;
 
 MethodObject :
-	""("" "")""															{ #method: }
-|	""("" MethodSlots "")"" 												{ #method: }
-|	""("" Code "")"" 														{ #method: }
-|	""("" MethodSlots Code "")"" 											{ #method: }
+	""{"" ""}""															{ #method: }
+|	""{"" MethodSlots ""}"" 												{ #method: }
+|	""{"" Code ""}"" 														{ #method: }
+|	""{"" MethodSlots Code ""}"" 											{ #method: }
 	;
 	
 Object:

@@ -1,6 +1,6 @@
 generated
 scanForTokenX6
-	[ self recordMatch: #(16).
+	[ self recordMatch: #(18).
 	self step.
 	currentCharacter == $!
 		or: [ (currentCharacter between: $$ and: $&)

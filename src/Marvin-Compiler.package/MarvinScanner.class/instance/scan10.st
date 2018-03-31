@@ -2,7 +2,7 @@ generated
 scan10
 	[ self step.
 	currentCharacter == $:
-		ifTrue: [ self recordMatch: #(14).
+		ifTrue: [ self recordMatch: #(16).
 			self step.
 			((currentCharacter between: $A and: $Z)
 				or: [ currentCharacter == $_ or: [ currentCharacter between: $a and: $z ] ])

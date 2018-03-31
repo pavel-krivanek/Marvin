@@ -2,7 +2,7 @@ generated
 scan6
 	self step.
 	(currentCharacter between: $0 and: $9)
-		ifTrue: [ [ self recordMatch: #(18).
+		ifTrue: [ [ self recordMatch: #(20).
 			self step.
 			currentCharacter between: $0 and: $9 ] whileTrue.
 			^ self reportLastMatch ].

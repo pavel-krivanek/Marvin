@@ -9,13 +9,13 @@ dataSlot: aCollection
 	slot := (MarvinSlotLiteral new)
 				name: aCollection first value;
 				type: #assignSlot.
-	aCollection size = 5 
+	aCollection size = 3 
 		ifTrue: [
 			| cont |.
 			slot type: ((aCollection second value = '=')
 				ifTrue:  [ #readSlot ]
 				ifFalse: [ #assignSlot ]).
-			cont := aCollection fourth.
+			cont := aCollection third.
 			cont addInstruction: (cont generator instrReturnTop ).
 			slot content: cont.
 		]

@@ -1,6 +1,6 @@
 generated
 scan2
-	self recordMatch: #(22).
+	self recordMatch: #(24).
 	self step.
 	((currentCharacter between: $A and: $Z)
 		or: [ currentCharacter == $_ or: [ currentCharacter between: $a and: $z ] ])

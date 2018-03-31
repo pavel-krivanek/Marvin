@@ -3,7 +3,7 @@ scan5
 	self step.
 	((currentCharacter between: $0 and: $9)
 		or: [ currentCharacter between: $A and: $Z ])
-		ifTrue: [ [ self recordMatch: #(18).
+		ifTrue: [ [ self recordMatch: #(20).
 			self step.
 			currentCharacter == $e
 				ifTrue: [ ^ self scan6 ].

@@ -8,13 +8,13 @@ parentSlot: aCollection
 	slot := (MarvinSlotLiteral new)
 				name: aCollection first value.
 
-	aCollection size = 5 
+	aCollection size = 3 
 		ifTrue: [
 			| cont |.
 			slot type: ((aCollection second value = '=')
 				ifTrue:  [ #parentSlot ]
 				ifFalse: [ #readWriteParentSlot ]).
-			cont := aCollection fourth.
+			cont := aCollection third.
 			cont addInstruction: (cont generator instrReturnTop ).
 			slot content: cont.
 		]

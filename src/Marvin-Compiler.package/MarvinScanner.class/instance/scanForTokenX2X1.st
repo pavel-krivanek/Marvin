@@ -1,16 +1,16 @@
 generated
 scanForTokenX2X1
-	self recordMatch: #(11).
+	self recordMatch: #(13).
 	self step.
 	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
 	currentCharacter == $:
 		ifTrue: [ ^ self scan9 ].
 	(currentCharacter between: $0 and: $9)
-		ifTrue: [ [ self recordMatch: #(11 18).
+		ifTrue: [ [ self recordMatch: #(13 20).
 			self step.
 			currentCharacter == $*
-				ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+				ifTrue: [ ^ self recordAndReportMatch: #(14) ].
 			currentCharacter == $:
 				ifTrue: [ ^ self scan9 ].
 			currentCharacter between: $0 and: $9 ] whileTrue.

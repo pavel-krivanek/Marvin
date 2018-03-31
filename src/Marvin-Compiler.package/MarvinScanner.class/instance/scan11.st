@@ -1,9 +1,9 @@
 generated
 scan11
-	[ self recordMatch: #(11).
+	[ self recordMatch: #(13).
 	self step.
 	currentCharacter == $*
-		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(14) ].
 	currentCharacter == $:
 		ifTrue: [ ^ self scan9 ].
 	(currentCharacter between: $0 and: $9)

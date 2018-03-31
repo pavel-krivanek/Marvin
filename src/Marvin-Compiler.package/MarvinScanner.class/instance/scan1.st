@@ -2,7 +2,7 @@ generated
 scan1
 	[ self step.
 	currentCharacter == $'
-		ifTrue: [ self recordMatch: #(22).
+		ifTrue: [ self recordMatch: #(24).
 			self step.
 			currentCharacter == $'
 				ifTrue: [ ^ self scan1 ].

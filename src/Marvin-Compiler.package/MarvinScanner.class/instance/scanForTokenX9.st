@@ -1,13 +1,13 @@
 generated
 scanForTokenX9
-	currentCharacter == $[
-		ifTrue: [ ^ self recordAndReportMatch: #(2) ].
-	currentCharacter == $]
-		ifTrue: [ ^ self recordAndReportMatch: #(1) ].
 	currentCharacter == $^
-		ifTrue: [ ^ self recordAndReportMatch: #(8) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(10) ].
+	currentCharacter == ${
+		ifTrue: [ ^ self recordAndReportMatch: #(12) ].
 	currentCharacter == $|
-		ifTrue: [ ^ self recordAndReportMatch: #(7) ].
+		ifTrue: [ ^ self recordAndReportMatch: #(5) ].
+	currentCharacter == $}
+		ifTrue: [ ^ self recordAndReportMatch: #(9) ].
 	(currentCharacter between: $0 and: $9)
 		ifTrue: [ ^ self scan4 ].
 	(currentCharacter between: $A and: $Z)
