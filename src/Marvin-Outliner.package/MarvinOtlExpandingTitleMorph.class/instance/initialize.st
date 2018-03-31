@@ -33,6 +33,6 @@ initialize
 			fullFrame: (
 			LayoutFrame 
 				fractions: (1@1 corner: 1@1) 
-				offsets: ((-16)@(-16) corner: 0@0)).
+				offsets: ((-12)@(-12) corner: (-4)@(-4))).
 
 	self height: (labelMorph height max: buttonMorph height).

@@ -2,12 +2,12 @@ as yet unclassified
 justDroppedInto: aMorph event: anEvent
 
 	(aMorph isWorldMorph )
-		ifTrue: [
-			| outliner |
-			outliner := MarvinOutliner new.
-			outliner addSlot: self.
-			outliner position: anEvent position.
-			outliner openInWorld.		
+		ifTrue: [ 
+			| newOutliner |
+			newOutliner := MarvinOutliner new.
+			newOutliner addSlot: self.
+			newOutliner position: anEvent position.
+			newOutliner openInWorld.		
 			super justDroppedInto: aMorph event: anEvent  ]
 		ifFalse: [ 
 			super justDroppedInto: aMorph event: anEvent ].

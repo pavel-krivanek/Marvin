@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "BorderedMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"outliner",
+		"model"
+	],
+	"name" : "MarvinOtlComponent",
+	"type" : "normal"
+}

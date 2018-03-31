@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinOtlHideableComponent",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinOtlSlotWithComponents",
+	"type" : "normal"
+}

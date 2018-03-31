@@ -1,6 +1,8 @@
 as yet unclassified
 initialize
 
+	| evaluatorButton |
+
 	super initialize.
 
 	self color: (Color transparent)..
@@ -9,6 +11,15 @@ initialize
 	self listDirection: #leftToRight.
 	self hResizing: #shrinkWrap.
 	self vResizing: #shrinkWrap.
+
+	self addMorph: ('Prototype' asMorph).
+
+	evaluatorButton := MarvinOtlHeaderButton new.
+	evaluatorButton action: [ owner evaluator toggle: nil. ].
+	self addMorph: evaluatorButton.
+
+	evaluatorButton := MarvinOtlExpandingButtonMorph  new.
+	self addMorph: evaluatorButton.
 
 "	labelMorph := StringMorph new.
 	self addMorph: labelMorph

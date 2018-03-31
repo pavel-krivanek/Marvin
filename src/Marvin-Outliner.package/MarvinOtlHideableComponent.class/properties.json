@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinOtlComponent",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"title",
+		"state",
+		"container"
+	],
+	"name" : "MarvinOtlHideableComponent",
+	"type" : "normal"
+}

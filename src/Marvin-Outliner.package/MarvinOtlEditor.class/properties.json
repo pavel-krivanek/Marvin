@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PluggableTextMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"resizingMorph",
+		"resizeAction"
+	],
+	"name" : "MarvinOtlEditor",
+	"type" : "normal"
+}

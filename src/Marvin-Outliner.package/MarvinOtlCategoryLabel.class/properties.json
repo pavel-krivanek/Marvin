@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinOtlComponent",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"labelMorph"
+	],
+	"name" : "MarvinOtlCategoryLabel",
+	"type" : "normal"
+}

@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"slots"
+		"slots",
+		"header",
+		"evaluator"
 	],
 	"name" : "MarvinOutliner",
 	"type" : "normal"

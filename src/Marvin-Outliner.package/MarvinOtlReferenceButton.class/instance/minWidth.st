@@ -1,4 +1,4 @@
 as yet unclassified
 minWidth
 
-	^ 8
+	^ 12

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinOtlComponentTitle",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"dragButton",
+		"referenceButton",
+		"label"
+	],
+	"name" : "MarvinOtlSlotTitle",
+	"type" : "normal"
+}

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "EllipseMorph",
+	"super" : "BorderedMorph",
 	"category" : "Marvin-Outliner",
 	"classinstvars" : [ ],
 	"pools" : [ ],

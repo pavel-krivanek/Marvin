@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BorderedMorph",
+	"category" : "Marvin-Outliner",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MarvinOtlEditorResizingMorph",
+	"type" : "normal"
+}

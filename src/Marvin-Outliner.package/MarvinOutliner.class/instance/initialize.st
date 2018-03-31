@@ -16,7 +16,12 @@ initialize
 
 	self reverseTableCells: true.
 
-	self addMorph: (MarvinOtlHeader new).
+	header := MarvinOtlHeader new.
+	self addMorph: header.
+
+	"evaluator := (MarvinOtlEvaluator new model: 'Evaluator').
+	self addMorph: evaluator."
+	self adjustWidth.
 
 	
 
