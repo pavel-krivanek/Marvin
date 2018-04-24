@@ -18,9 +18,9 @@ Metacello new
 parent := MarvinPrototype new.
 object := MarvinPrototype new.
 object AddParentSlot: #parent value: parent.
-parent AddReadSlot: #parentData value: 42.
-parent AddReadSlot: #data value: 1.
-object AddMethod: 'doIt ^ super parentData'.
+parent AddReadSlot: #parentData value: 21.
+parent AddReadSlot: #factor value: 2.
+object AddMethod: 'doIt ^ super parentData * self factor'.
 
 object doIt >>> 42.
 ```
