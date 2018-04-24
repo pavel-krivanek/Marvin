@@ -42,6 +42,7 @@ MarvinParser parse: '
 ```
 
 ### More complex delegation example
+```
 MarvinPrototype createLobby.
 MarvinParser parse: '
 	| p1 |
