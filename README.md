@@ -11,7 +11,21 @@ Metacello new
     load
 ```
 
-### Delegation example
+### Direct prototypes usage form Pharo
+```
+| parent object |
+
+parent := MarvinPrototype new.
+object := MarvinPrototype new.
+object AddParentSlot: #parent value: parent.
+parent AddReadSlot: #parentData value: 42.
+parent AddReadSlot: #data value: 1.
+object AddMethod: 'doIt ^ super parentData'.
+
+object doIt >>> 42.
+```
+
+### Parser example
 
 ```
 MarvinPrototype createLobby.
@@ -20,13 +34,13 @@ MarvinParser parse: '
 	p1: (|
 		parent* = (|
 			parent* = (|
-				a = {^a}.
+				a = { ^a }.
 				b = 1 |).
-			a = {^resend a} |).
+			a = { ^resend a } |).
 		a = (|
 			a = 3.
 			b = 4 |).
-		method = {^resend a a} |).
+		method = { ^resend a a } |).
 	p1 method
 '
 ```
