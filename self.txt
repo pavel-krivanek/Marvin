@@ -1,0 +1,93 @@
+Self is an object-oriented programming language with a tight binding to its development environment. The syntax and semantics of the language are very close to the Smalltalk-80, that is the direct predecessor of this language.
+
+Like Smalltalk, even Self is pure object-oriented dynamically typed language with an incrementally built environment with support of exploratory programming. However, Self differs from Smalltalk in several points:
+- Self has easier semantics and syntax than Smalltalk. Its design is focused on maximal simplicity and concreteness of constructs. Thans to that more properties of Self is implemented directly in itself.
+- Self has no classes. Instead of the class system, it uses more concrete object system.
+- the development environment of Self is much more focused on work with existing objects.
+
+Self programing language was designed in 1986 by David Ungar and Randall Smith. Its First implementation was developed in 1987 on the Standford University. Here it served as the base for the next research and it was published in 1990. The development of Self was overtaken by the company Sun Microsystems Labs that improved it further.
+
+Objects
+
+Self has two basic language entities: objects and slots. Objects consist of a collection of slots and, eventually, by a code that should be executed in the context of the object. Every slot then consists of a name and a reference to another object. This simple structure is enough to realize the object paradigm in the range known from Smalltalk and other object-oriented programing languages. Moreover, thanks to it, Self brings the next concepts that are not common in the other languages like multiple dynamic inheritance.
+
+All object in Self have the same structure, but we still can distinguish three types of objects according to the way how they work with the associated code.
+1. data (regular) objects. These objects have no associated code
+2. methods. They are objects with associated code
+3. blocks. Blocks are a syntactic shortcut for two regular objects where from which one has associated code
+
+Slots
+
+Slots are named references to objects. We distinguish several types of slots:
+1. read-only data slots
+2. read/write data slots. It is a syntactic shortcut for two slots where one serves for reading and the second serves for writing. Both of them point to the same object
+3. Slots that are referencing methods
+4. Slots of formal arguments (argument slots). They serve for the passing of arguments to methods and blocks
+5. read-only parent slots. They serve for delegation of messages to other objects.
+6. read/write parent slots. It is a syntactic shortcut for two slots where one is a read-only parent slots and the other servers only for writing. Both are referencing the same parent object
+
+Then we can identify the next two auxiliary kinds of slots:
+
+7. commentary slots. They assign comments to objects and other slots. They can contain only strings and they have no assigned name. They are very unique and the following information about slots is not related to them.
+8. parent argument slots. They have no support in syntax of the language. They serve as auxiliary slots during methods activation
+9. unnamed slots. They have no support in syntax of the language. They serve as auxiliary slots during blocks invocation
+
+readOnlyParentSlot*
+readWriteParentSlot* ←
+:parentArgumentSlot*
+(parentUnnamedSlot*)
+readOnlyDataSlot
+readWriteDataSlot ←
+:argumentSlot
+(unnamedSlot)
+method slot  (↑ 3+4)
+{ commentary slot }
+
+Object with all types of slots
+
+Idealized bytecode
+
+In the next description of Self programming language, we will use an idealized bytecode for the demonstration of the language mechanisms. This bytecode consists of only five instructions and it does not correspond to the real bytecode used in the Self implementation. It is only a theoretical construct, however, it coincides with the real behavior of Self programs. It was designed for the need of this work and it it is not mentioned elsewhere in the literature. It is used mainly in the attached graphs.
+
+The instructions of the idealized Self bytecode are:
+pushSelf
+- has no argument
+- it places the object, in which context the code in executed, on top of the stack
+- alternative name: pushReceiver
+send
+- it receives a selector of the called message as the argument
+- it will execute a message send in context of the object that in on top of the stack
+- it removes the object on top of the stack and places the result of the message send
+resend
+- it receives a selector of the called message as the argument
+- it will execute a message send in context of the object that in on top of the stack
+- it removes the object on top of the stack and places the result of the message send
+- the lookup of the method that corresponds to the selector of the message starts in the parent of the object that owns the method that owns the code where the resend is executed (method holder)
+pop
+- takes the top of the stack and throws it away
+returnTop
+- return from the method. The current top of the stack is supposed to be the return value
+
+Slots lookup
+
+Every slot in an object is identified by its name. If a message is sent to the object, all the slots in the object are being scanned and the selector of the message is compared to the slot names. If the equality of the message selector and the name of a slot is found, the referenced to the referenced object is returned in case of data slots, argument slots and parent slots.
+In case that the found slot contains a method, this method is invoked and the reference to the object, that is being obtained as the return value of the method, is returned.
+The special characters as star and colon are not counted into the name of the method. They only help to distinguish slot types on the syntactic level.
+Self does not distinguish between data slots, parent and argument slots as well as to slots that contain methods. That means that in the interface of the object, these types of slots are interchangeable.
+If no match for the message selector and slot name is found. the message is delegated to the objects referenced by the parent slots. In case that the delegation is not successful so the no matching slots is found it the parent objects, an exception is raised.
+
+Delegation
+
+If no slot is found in the object that receives a message, the delegation to parent objects is performed. That means that the virtual machine starts to scan all slots of objects referenced by parent slots. The same way as in case of lookup in a single object is used.
+The lookup is performed recursively and the lookup algorithm allows cycles. It is guaranteed that no object will be scanned several times.
+If the match of a slot name and the message selector is found in the delegated object of in some of its parent objects, in case of data slots, argument slots and parent slots
+
+
+
+
+
+
+
+
+
+
