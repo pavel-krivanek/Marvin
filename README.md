@@ -11,7 +11,7 @@ Metacello new
     load
 ```
 
-### Direct prototypes usage form Pharo
+### Direct prototypes usage from Pharo
 ```
 | parent object |
 
@@ -24,6 +24,7 @@ object AddMethod: 'doIt ^ super parentData'.
 
 object doIt >>> 42.
 ```
+Note: upper-case characters for method names are choosen because they play a role of primitives
 
 ### Parser example
 
