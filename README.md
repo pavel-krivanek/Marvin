@@ -31,6 +31,19 @@ Note: upper-case characters for method names are choosen because they play a rol
 ```
 MarvinPrototype createLobby.
 MarvinParser parse: '
+	| object |
+	object: (|
+		parent* = (|
+			parentData = 21.
+			factor = 2 |).
+		doIt = { ^ resend parentData * factor } |).
+	object doIt
+	'
+```
+
+### More complex delegation example
+MarvinPrototype createLobby.
+MarvinParser parse: '
 	| p1 |
 	p1: (|
 		parent* = (|
