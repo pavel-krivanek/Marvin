@@ -5,16 +5,16 @@ performMessageSupersend: aMessage inContextOf: anObject
 	
 	messageSelector := aMessage selector.
 
-	index := 1.
+	index := self primitiveSize.
 
 	[ (self at: index) == nil ]
 			whileFalse: [
 				| parent resultFromParent |
-				parent := self at: index+2.
+				parent := self at: index-2.
 				resultFromParent := parent performMessage: aMessage inContextOf: anObject.
 				resultFromParent ~= MarvinPrototype DNU
 					ifTrue: [ ^ resultFromParent ].
-				index := index + 3 ].
+				index := index - 3 ].
 	
 	^ MarvinPrototype DNU
 
