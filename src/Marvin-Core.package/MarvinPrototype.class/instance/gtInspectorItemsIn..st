@@ -1,14 +1,8 @@
-gt-inspector-extension
+support
 gtInspectorItemsIn: composite
-	<gtInspectorPresentationOrder: 0> 
-	^ (composite fastList)
+	<removed_gtInspectorPresentationOrder: 0> 
+	^ composite table
 		title: 'Slots';
-		display: [ 
-			self asOrderedCollection ];
-		beMultiple;	
-		format: [ :each | GTObjectPrinter asTruncatedTextFrom: each ];
-		send: [ :result | result isNil 
-			ifTrue:[nil]
-			ifFalse:[ (result size = 1) 
-				ifTrue: [result anyOne] 
-				ifFalse: [self species withAll: result]]]
+		display: [ {} ];
+		column: 'Name' evaluated: [ :each | 'each name' ];
+		column: 'Value' evaluated: [ :each | 'each value asString' ]

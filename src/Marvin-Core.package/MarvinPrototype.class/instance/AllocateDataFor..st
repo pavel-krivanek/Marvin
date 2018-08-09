@@ -1,4 +1,4 @@
-slots
+data
 AllocateDataFor: aBehavior
 
 	| newObject instSize |

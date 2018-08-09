@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "Object",
+	"super" : "ProtoObject",
 	"category" : "Marvin-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
