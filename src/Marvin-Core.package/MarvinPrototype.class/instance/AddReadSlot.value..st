@@ -26,7 +26,7 @@ AddReadSlot: slotName value: obj
 	[(self at: a) = nil ]
 		whileFalse: [
 			newPrototype at: b put: (self at: a).
-			newPrototype at: b+1 put: (self at: a-1).
+			newPrototype at: b-1 put: (self at: a-1).
 			a := a - 2. 
 			b := b - 2.].
 
