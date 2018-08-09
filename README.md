@@ -59,3 +59,16 @@ MarvinParser parse: '
 	p1 method
 '
 ```
+
+### Extending of existing standard objects with new methods and multiple inheritance
+```
+parent := MarvinPrototype new.
+parent AddReadSlot: #suffix value: '_suffix'.
+
+object := MarvinPrototype new.
+object AddParentSlot: #parent value: parent.
+object Inject: Date today.
+object AddMethod: 'dayOfWeekName ^ super dayOfWeekName, self suffix'.
+
+object dayOfWeekName.
+```
