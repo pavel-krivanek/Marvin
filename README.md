@@ -30,7 +30,7 @@ Note: upper-case characters for method names are choosen because they play a rol
 
 ```
 MarvinPrototype createLobby.
-MarvinParser parse: '
+(MarvinParser parse: '
 	| object |
 	object: (|
 		parent* = (|
@@ -38,13 +38,13 @@ MarvinParser parse: '
 			factor = 2 |).
 		doIt = { ^ resend parentData * factor } |).
 	object doIt
-	'
+') >>> 42
 ```
 
 ### More complex delegation example
 ```
 MarvinPrototype createLobby.
-MarvinParser parse: '
+(MarvinParser parse: '
 	| p1 |
 	p1: (|
 		parent* = (|
@@ -57,18 +57,21 @@ MarvinParser parse: '
 			b = 4 |).
 		method = { ^resend a a } |).
 	p1 method
-'
+') >>> 3
 ```
 
 ### Extending of existing standard objects with new methods and multiple inheritance
 ```
+objectToExtend := Date today.
+
 parent := MarvinPrototype new.
-parent AddReadSlot: #suffix value: '_suffix'.
+parent AddMethod: 'suffix ^ self suffixString asUppercase'.
+parent AddReadSlot: #suffixString value: '_suffix'.
 
 object := MarvinPrototype new.
 object AddParentSlot: #parent value: parent.
-object Inject: Date today.
+object Inject: objectToExtend.
 object AddMethod: 'dayOfWeekName ^ super dayOfWeekName, self suffix'.
 
-object dayOfWeekName.
+object dayOfWeekName >>> 'Thursday_SUFFIX'
 ```
