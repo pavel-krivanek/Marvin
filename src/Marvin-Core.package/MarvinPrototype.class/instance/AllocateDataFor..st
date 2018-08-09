@@ -5,8 +5,8 @@ AllocateDataFor: aBehavior
 	
 	instSize := aBehavior instSize.
 
-	newObject := MarvinPrototype basicNew: self primitiveSize + instSize.
+	newObject := MarvinPrototype basicNew: self PrimitiveSize + instSize.
 	
-	1 to: self primitiveSize do: [ :index | newObject instVarAt: instSize + index put: (self instVarAt: index) ].
+	1 to: self PrimitiveSize do: [ :index | newObject PrimitiveAt: instSize + index put: (self PrimitiveAt: index) ].
 
 	self become: newObject.

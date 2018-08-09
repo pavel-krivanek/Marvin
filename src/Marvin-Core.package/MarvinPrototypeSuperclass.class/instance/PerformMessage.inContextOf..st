@@ -1,26 +1,26 @@
 reflective operations
-performMessage: aMessage inContextOf: anObject
+PerformMessage: aMessage inContextOf: anObject
 
 	| messageSelector index currentSlot |
 	
 	messageSelector := aMessage selector.
 
-	index := self primitiveSize.
+	index := self PrimitiveSize.
 	
 	" process parent slots as messgaes "
-	[ (currentSlot := self at: index) == nil ]
+	[ (currentSlot := self PrimitiveAt: index) == nil ]
 		whileFalse: [ 
 			" read message "
 			(currentSlot = messageSelector) 
 				ifTrue: [
 					" push value of slot "
-					^ self at: index - 2].
+					^ self PrimitiveAt: index - 2].
 			" write message "
-			currentSlot := self at: index-1.
+			currentSlot := self PrimitiveAt: index-1.
 			(currentSlot = messageSelector) 
 				ifTrue: [ 
 					" write value to slot "
-					self at: index - 2 put: aMessage argument.
+					self PrimitiveAt: index - 2 put: aMessage argument.
 					^ anObject ] .
 			index := index - 3 ].
 
@@ -28,38 +28,38 @@ performMessage: aMessage inContextOf: anObject
 	
 	" process method slots "
 
-	[ (currentSlot := self at: index) = nil ]
+	[ (currentSlot := self PrimitiveAt: index) = nil ]
 		whileFalse: [ 
 			(currentSlot = messageSelector) 
 				ifTrue: [
-					^ (self at: index - 1) valueWithReceiver: anObject arguments: aMessage arguments ].
+					^ (self PrimitiveAt: index - 1) valueWithReceiver: anObject arguments: aMessage arguments ].
 			index := index - 2 ].
 
 	index := index - 1.
 
-	[ (currentSlot := self at: index) = nil ]
+	[ (currentSlot := self PrimitiveAt: index) = nil ]
 		whileFalse: [ 
 			" read message "
 			(currentSlot = messageSelector) 
 				ifTrue: [
 					" push value of slot "
-					^ self at: index - 2].
+					^ self PrimitiveAt: index - 2].
 			" write message "
-			currentSlot := self at: index-1.
+			currentSlot := self PrimitiveAt: index-1.
 			(currentSlot = messageSelector) 
 				ifTrue: [ 
 					" write value to slot "
-					self at: index - 2 put: aMessage argument.
+					self PrimitiveAt: index - 2 put: aMessage argument.
 					^ anObject ] .
 			index := index - 3 ].
 		
-	index := self primitiveSize.
+	index := self PrimitiveSize.
 
-	[ (self at: index) = nil ]
+	[ (self PrimitiveAt: index) = nil ]
 			whileFalse: [
 				| parent resultFromParent |
-				parent := self at: index-2.
-				resultFromParent := parent performMessage: aMessage inContextOf: anObject.
+				parent := self PrimitiveAt: index-2.
+				resultFromParent := parent PerformMessage: aMessage inContextOf: anObject.
 				resultFromParent ~= MarvinPrototype DNU
 					ifTrue: [ ^ resultFromParent ].
 				index := index - 3 ].

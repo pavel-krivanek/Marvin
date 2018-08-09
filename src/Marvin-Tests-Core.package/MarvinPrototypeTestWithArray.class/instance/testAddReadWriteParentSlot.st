@@ -8,14 +8,14 @@ testAddReadWriteParentSlot
 
 	self checkArrayContent.
 	
-	self assert: object primitiveSize equals: 8.
+	self assert: object PrimitiveSize equals: 8.
 		
-	self assert: (object at: 3) equals: nil.
-	self assert: (object at: 4) equals: nil.
-	self assert: (object at: 5) equals: nil.
-	self assert: (object at: 6) equals: parent.
-	self assert: (object at: 7) equals: #parent:.
-	self assert: (object at: 8) equals: #parent.
+	self assert: (object PrimitiveAt: 3) equals: nil.
+	self assert: (object PrimitiveAt: 4) equals: nil.
+	self assert: (object PrimitiveAt: 5) equals: nil.
+	self assert: (object PrimitiveAt: 6) equals: parent.
+	self assert: (object PrimitiveAt: 7) equals: #parent:.
+	self assert: (object PrimitiveAt: 8) equals: #parent.
 	
 	
 	

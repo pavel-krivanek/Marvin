@@ -5,14 +5,14 @@ testAddReadSlot
 
 	self checkArrayContent.
 	
-	self assert: object primitiveSize equals: 8.
+	self assert: object PrimitiveSize equals: 8.
 		
-	self assert: (object at: 3) equals: nil.
-	self assert: (object at: 4) equals: 42.
-	self assert: (object at: 5) equals: #data.
-	self assert: (object at: 6) equals: #data.
-	self assert: (object at: 7) equals: nil.
-	self assert: (object at: 8) equals: nil.
+	self assert: (object PrimitiveAt: 3) equals: nil.
+	self assert: (object PrimitiveAt: 4) equals: 42.
+	self assert: (object PrimitiveAt: 5) equals: #data.
+	self assert: (object PrimitiveAt: 6) equals: #data.
+	self assert: (object PrimitiveAt: 7) equals: nil.
+	self assert: (object PrimitiveAt: 8) equals: nil.
 
 	
 	

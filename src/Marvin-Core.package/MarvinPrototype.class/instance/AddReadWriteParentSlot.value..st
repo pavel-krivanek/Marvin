@@ -5,30 +5,30 @@ AddReadWriteParentSlot: slotName value: obj
 
 	slotName ifNil: [ self error: 'Wrong slot name' ].
 	
-	newPrototype := MarvinPrototype basicNew: self primitiveSize + 3.
+	newPrototype := MarvinPrototype basicNew: self PrimitiveSize + 3.
 	
-	a := self primitiveSize.
-	b := newPrototype primitiveSize.
+	a := self PrimitiveSize.
+	b := newPrototype PrimitiveSize.
 
 	" parent slots "
-	[(self at: a) = nil ]
+	[(self PrimitiveAt: a) = nil ]
 		whileFalse: [
-			newPrototype at: b put: (self at: a).
-			newPrototype at: b-1 put: (self at: a-1).
-			newPrototype at: b-2 put: (self at: a-2).
+			newPrototype PrimitiveAt: b put: (self PrimitiveAt: a).
+			newPrototype PrimitiveAt: b-1 put: (self PrimitiveAt: a-1).
+			newPrototype PrimitiveAt: b-2 put: (self PrimitiveAt: a-2).
 			a := a - 3. 
 			b := b - 3.].
 	
 	" add slot "
 
-	newPrototype at: b put: slotName.
-	newPrototype at: b-1 put: (slotName, ':') asSymbol.
-	newPrototype at: b-2 put: obj.
+	newPrototype PrimitiveAt: b put: slotName.
+	newPrototype PrimitiveAt: b-1 put: (slotName, ':') asSymbol.
+	newPrototype PrimitiveAt: b-2 put: obj.
 
 	b := b - 3.
 
 	[ a > 0 ] whileTrue: [
-			newPrototype at: b put: (self at: a).
+			newPrototype PrimitiveAt: b put: (self PrimitiveAt: a).
 			a := a - 1. 
 			b := b - 1.].
 

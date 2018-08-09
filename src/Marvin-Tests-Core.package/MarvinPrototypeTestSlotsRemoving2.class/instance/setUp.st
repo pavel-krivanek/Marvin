@@ -7,8 +7,8 @@ setUp
 	parent2 := MarvinPrototype new.
 
 	object := MarvinPrototype new: 2.
-	object at: 1 put: 1.
-	object at: 2 put: 2.
+	object PrimitiveAt: 1 put: 1.
+	object PrimitiveAt: 2 put: 2.
 	
 	object AddParentSlot: #builtInParent value: parent.
 	object AddReadWriteParentSlot: #builtInParent2 value: parent2.

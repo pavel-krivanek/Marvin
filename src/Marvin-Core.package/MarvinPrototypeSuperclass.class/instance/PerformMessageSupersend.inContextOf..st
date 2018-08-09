@@ -1,17 +1,17 @@
 reflective operations
-performMessageSupersend: aMessage inContextOf: anObject
+PerformMessageSupersend: aMessage inContextOf: anObject
 
 	| messageSelector index  |
 	
 	messageSelector := aMessage selector.
 
-	index := self primitiveSize.
+	index := self PrimitiveSize.
 
-	[ (self at: index) == nil ]
+	[ (self PrimitiveAt: index) == nil ]
 			whileFalse: [
 				| parent resultFromParent |
-				parent := self at: index-2.
-				resultFromParent := parent performMessage: aMessage inContextOf: anObject.
+				parent := self PrimitiveAt: index-2.
+				resultFromParent := parent PerformMessage: aMessage inContextOf: anObject.
 				resultFromParent ~= MarvinPrototype DNU
 					ifTrue: [ ^ resultFromParent ].
 				index := index - 3 ].
