@@ -1,14 +1,13 @@
 slots
 RemoveSlot: slotName 
 
-	| newPrototype a b found reduction |
+	| newPrototype a b found |
 
 	a := self primitiveSize.
 	b := self primitiveSize.
-	reduction := 0.
 	found := false.
-
-	newPrototype := Array new: self primitiveSize.
+		
+	newPrototype := Array basicNew: self primitiveSize.
 
 	" parent slots "
 	[(self at: a) = nil ]
@@ -16,8 +15,7 @@ RemoveSlot: slotName
 			((self at: a) == slotName)
 				ifTrue: [ 
 					found := true.
-					a := a - 3.
-					reduction := reduction + 3 ]
+					a := a - 3. ]
 				ifFalse: [ 
 					newPrototype at: b put: (self at: a).
 					newPrototype at: b-1 put: (self at: a-1).
@@ -35,8 +33,7 @@ RemoveSlot: slotName
 			((self at: a) == slotName)
 				ifTrue: [ 
 					found := true.
-					a := a - 2.
-					reduction := reduction + 2 ]
+					a := a - 2. ]
 				ifFalse: [ 
 					newPrototype at: b put: (self at: a).
 					newPrototype at: b-1 put: (self at: a-1).
@@ -53,8 +50,7 @@ RemoveSlot: slotName
 			((self at: a) == slotName)
 				ifTrue: [ 
 					found := true.
-					a := a - 3.
-					reduction := reduction + 3 ]
+					a := a - 3. ]
 				ifFalse: [ 
 					newPrototype at: b put: (self at: a).
 					newPrototype at: b-1 put: (self at: a-1).
@@ -62,7 +58,12 @@ RemoveSlot: slotName
 					a := a - 3. 
 					b := b - 3.] ].
 
+	[ a > 0 ] whileTrue: [
+			newPrototype at: b put: (self at: a).
+			a := a - 1. 
+			b := b - 1.].
+
 	found ifFalse: [ MarvinSlotNotFound signal ].
 
-	self become: (MarvinPrototype withAll: (newPrototype copyFrom: reduction to: self primitiveSize)).
+	self become: (MarvinPrototype withAll: (newPrototype copyFrom: b-a+1 to: self primitiveSize)).
 

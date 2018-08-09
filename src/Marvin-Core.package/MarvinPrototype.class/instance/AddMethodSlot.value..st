@@ -5,7 +5,7 @@ AddMethodSlot: slotName value: method
 
 	slotName ifNil: [ self error: 'Wrong slot name' ].
 	
-	newPrototype := MarvinPrototype new: self primitiveSize + 2.
+	newPrototype := MarvinPrototype basicNew: self primitiveSize + 2.
 	
 	a := self primitiveSize.
 	b := newPrototype primitiveSize.

@@ -5,7 +5,7 @@ AddReadSlot: slotName value: obj
 
 	slotName ifNil: [ self error: 'Wrong slot name' ].
 	
-	newPrototype := MarvinPrototype new: self primitiveSize + 3.
+	newPrototype := MarvinPrototype basicNew: self primitiveSize + 3.
 	
 	a := self primitiveSize.
 	b := newPrototype primitiveSize.

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "MarvinPrototypeTestSlotsRemoving",
+	"category" : "Marvin-Tests-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parent",
+		"parent2",
+		"compiledMethod"
+	],
+	"name" : "MarvinPrototypeTestSlotsRemoving2",
+	"type" : "normal"
+}

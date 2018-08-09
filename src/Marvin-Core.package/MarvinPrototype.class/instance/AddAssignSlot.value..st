@@ -5,7 +5,7 @@ AddAssignSlot: slotName value: obj
 
 	slotName ifNil: [ self error: 'Wrong slot name' ].
 	
-	newPrototype := MarvinPrototype new: self size + 3.
+	newPrototype := MarvinPrototype basicNew: self size + 3.
 	
 	a := self primitiveSize.
 	b := newPrototype primitiveSize.

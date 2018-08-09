@@ -1,4 +1,4 @@
 as yet unclassified
 new
 
-	^ self new: 3
+	^ super new: 3

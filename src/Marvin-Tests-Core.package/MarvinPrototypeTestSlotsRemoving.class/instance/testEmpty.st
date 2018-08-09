@@ -1,0 +1,8 @@
+running
+testEmpty
+	
+	self checkArrayContent.
+
+	
+	
+	
