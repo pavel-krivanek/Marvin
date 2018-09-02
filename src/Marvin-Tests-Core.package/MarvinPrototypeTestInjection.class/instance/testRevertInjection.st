@@ -7,7 +7,7 @@ testRevertInjection
 	self assert: object class equals: Point.
 	self assert: object y equals: 5.
 	
-	object revertInjection.
+	object RevertInjection.
 	
 	self assert: object class equals: Point.
 	self assert: object y equals: 2.
