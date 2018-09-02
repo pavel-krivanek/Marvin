@@ -3,7 +3,12 @@ initialize
 
 	super initialize.
 
-	self color: Color transparent.
+	state := #collapsed.
+
+	self addTitle.
+
+
+	self color: Color red.
 	self borderWidth: 0.
 	self layoutPolicy: TableLayout new.
 	self reverseTableCells: true.
@@ -11,9 +16,7 @@ initialize
 	self hResizing: #shrinkWrap.
 	self vResizing: #shrinkWrap.
 
-	self addTitle.
 
-	state := #collapsed.
 
 	self enableDrag: false.
 	

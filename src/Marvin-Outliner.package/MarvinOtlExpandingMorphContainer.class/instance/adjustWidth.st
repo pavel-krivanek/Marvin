@@ -8,4 +8,4 @@ adjustWidth
 	own ifNil: [ ^ self ].
 	(own isKindOf: PasteUpMorph) ifTrue: [ ^ self ].
 
-	 own adjustWidth
+	 own adjustWidth.

@@ -1,4 +1,4 @@
 as yet unclassified
-minHeigh
+minHeight
 
 	^ 16

@@ -8,7 +8,7 @@ adjustWidth: minimalWidth
 	super adjustWidth: maxWidth.
 
 	self title ifNotNil: [
-		self title width: maxWidth+10. ]
+		self title width: maxWidth. ]
 	
 
 

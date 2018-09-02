@@ -24,5 +24,3 @@ toggle: aSymbol
 			titleMorph layoutChanged.
 			self adjustWidth: self optimalWidth .
 			self adjustWidth.].
-	
-	

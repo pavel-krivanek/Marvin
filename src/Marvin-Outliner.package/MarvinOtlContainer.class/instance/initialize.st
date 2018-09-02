@@ -3,7 +3,7 @@ initialize
 
 	super initialize.
 
-	self color: Color transparent.
+	self color: Color red.
 	self borderWidth: 0.
 	self layoutPolicy: TableLayout new.
 	self cellPositioning: #leftCenter.

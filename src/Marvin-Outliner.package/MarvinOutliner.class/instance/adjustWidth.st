@@ -3,8 +3,9 @@ adjustWidth
 
 	| optimalWidth |
 	
-	optimalWidth := self optimalWidth + 22. 
+	optimalWidth := self optimalWidth . 
 
 	submorphs do: [ :m | 
 		m adjustWidth: optimalWidth ].
+	
 	

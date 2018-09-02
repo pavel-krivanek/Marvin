@@ -1,13 +1,13 @@
 as yet unclassified
 initialize
 
-	| evaluatorButton |
+	| evaluatorButton closeButton |
 
 	super initialize.
 
 	self color: (Color transparent)..
 	self borderWidth: 0.
-	self layoutPolicy: ProportionalLayout new.
+	self layoutPolicy: RowLayout new.
 	self listDirection: #leftToRight.
 	self hResizing: #shrinkWrap.
 	self vResizing: #shrinkWrap.
@@ -15,8 +15,14 @@ initialize
 	self addMorph: ('Prototype adfasd fasd fas dfa sdfas dfas df asdf' asMorph).
 
 	evaluatorButton := MarvinOtlHeaderButton new.
+	evaluatorButton text: 'e'.
 	evaluatorButton action: [ owner evaluator toggle: nil. ].
 	self addMorph: evaluatorButton.
+	
+	closeButton := MarvinOtlHeaderButton new.
+	closeButton text: 'x'.
+	closeButton action: [ owner delete ].
+	self addMorph: closeButton.
 
 
 

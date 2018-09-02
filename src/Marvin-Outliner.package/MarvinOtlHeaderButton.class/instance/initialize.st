@@ -9,3 +9,5 @@ initialize
 
 	self extent: 16@16..
 	self collapse.
+	
+	text := ' '.

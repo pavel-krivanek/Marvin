@@ -1,4 +1,4 @@
 accessing
 optimalWidth
 
-	^  50 .
+	^  50.
