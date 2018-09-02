@@ -7,6 +7,7 @@ testInjection
 
 	parent := MarvinPrototype new.
 	parent AddMethod: 'testingMethod ^ self x - self y + self testingValue'.
+	parent AddAssignSlot: #y value: 5.
 	parent AddReadSlot: #testingValue value: 42.
 
 	object := MarvinPrototype new.
@@ -14,4 +15,4 @@ testInjection
 	object Inject: objectToExtend.
 	object AddReadSlot: #testingValue value: 3.
 
-	self assert: object testingMethod equals: 2.
+	self assert: object testingMethod equals: -1.
