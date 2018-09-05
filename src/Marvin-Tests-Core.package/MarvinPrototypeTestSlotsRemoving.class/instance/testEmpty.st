@@ -1,8 +1,0 @@
-running
-testEmpty
-	
-	self checkArrayContent.
-
-	
-	
-	

@@ -1,4 +1,0 @@
-accessing
-argumentsAndTemporaries
-	
-	^ arguments, temporaries

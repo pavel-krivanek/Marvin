@@ -1,4 +1,0 @@
-accessing
-isObjectLiteral
-
-	^ true.

@@ -1,4 +1,0 @@
-accessing
-model
-
-	^ outlinerComponent model

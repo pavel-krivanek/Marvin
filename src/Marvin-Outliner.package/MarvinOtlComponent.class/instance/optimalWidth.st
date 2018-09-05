@@ -1,4 +1,0 @@
-accessing
-optimalWidth
-
-	^ 70

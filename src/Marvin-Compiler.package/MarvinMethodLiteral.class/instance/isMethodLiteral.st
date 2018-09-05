@@ -1,4 +1,0 @@
-accessing
-isMethodLiteral
-
-	^ true
