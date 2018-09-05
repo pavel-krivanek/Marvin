@@ -17,10 +17,10 @@ Metacello new
 
 parent := MarvinPrototype new.
 object := MarvinPrototype new.
-object AddParentSlot: #parent value: parent.
-parent AddReadSlot: #parentData value: 21.
-parent AddReadSlot: #factor value: 2.
-object AddMethod: 'doIt ^ super parentData * self factor'.
+object _AddParentSlot: #parent value: parent.
+parent _AddReadSlot: #parentData value: 21.
+parent _AddReadSlot: #factor value: 2.
+object _AddMethod: 'doIt ^ super parentData * self factor'.
 
 object doIt >>> 42.
 ```
@@ -65,13 +65,13 @@ MarvinPrototype createLobby.
 objectToExtend := Date today.
 
 parent := MarvinPrototype new.
-parent AddMethod: 'suffix ^ self suffixString asUppercase'.
-parent AddReadSlot: #suffixString value: '_suffix'.
+parent _AddMethod: 'suffix ^ self suffixString asUppercase'.
+parent _AddReadSlot: #suffixString value: '_suffix'.
 
 object := MarvinPrototype new.
-object AddParentSlot: #parent value: parent.
-object Inject: objectToExtend.
-object AddMethod: 'dayOfWeekName ^ super dayOfWeekName, self suffix'.
+object _AddParentSlot: #parent value: parent.
+object _Inject: objectToExtend.
+object _AddMethod: 'dayOfWeekName ^ super dayOfWeekName, self suffix'.
 
 object dayOfWeekName >>> 'Thursday_SUFFIX'
 ```
