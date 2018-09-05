@@ -795,6 +795,20 @@ MarvinPrototype >> isKindOf: aClass [
 ]
 
 { #category : #support }
+MarvinPrototype >> isNumber [
+
+	| result |
+	
+	result := self _PerformMessage: (Message selector: #isNumber) inContextOf: self.
+	
+	^ result == MarvinPrototype DNU 
+		ifTrue: [ false]
+		ifFalse: [ result ]
+
+
+]
+
+{ #category : #support }
 MarvinPrototype >> isString [
 
 	| result |
