@@ -629,7 +629,7 @@ MarvinPrototype >> gtInspectorActions [
 
 [ | result |
 	
-	result := self PerformMessage: (Message selector: #gtInspectorActions) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #gtInspectorActions) inContextOf: self.
 	
 		
 	^ result == MarvinPrototype DNU 
@@ -640,7 +640,7 @@ MarvinPrototype >> gtInspectorActions [
 		from: self class
 		to: ProtoObject)
 		collect: [ :eachPragma | 
-			result := self PerformMessage: (Message selector: eachPragma methodSelector) inContextOf: self.
+			result := self _PerformMessage: (Message selector: eachPragma methodSelector) inContextOf: self.
 			(result = MarvinPrototype DNU) ifTrue: [ 
 				GLMAction new ]
 			"thisContext
@@ -831,6 +831,20 @@ MarvinPrototype >> printString [
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ 'aMarvinPrototype' ]
 		ifFalse: [ result ]
+
+]
+
+{ #category : #support }
+MarvinPrototype >> respondsTo: aSymbol [ 
+
+	| result |
+	
+	result := self _PerformMessage: (Message selector: #respondsTo argument: aSymbol) inContextOf: self.
+	
+	^ result == MarvinPrototype DNU 
+		ifTrue: [ self class canUnderstand: aSymbol ]
+		ifFalse: [ result ]
+
 
 ]
 
