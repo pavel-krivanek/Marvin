@@ -1,5 +1,5 @@
 reflective operations
-PrimitiveAt: anIndex
+_PrimitiveAt: anIndex
 
 	<primitive: 173 error: ec>
 	self primitiveFailed

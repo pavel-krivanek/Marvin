@@ -3,8 +3,8 @@ size
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #size) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #size) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
-		ifTrue: [ self PrimitiveSize ]
+		ifTrue: [ self _PrimitiveSize ]
 		ifFalse: [ result ]

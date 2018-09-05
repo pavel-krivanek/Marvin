@@ -1,8 +1,8 @@
 running
 testAddReadSlot
 	
-	object AddReadSlot: #data value: 42.
-	object RemoveSlot: #data.
+	object _AddReadSlot: #data value: 42.
+	object _RemoveSlot: #data.
 
 	self checkArrayContent.
 

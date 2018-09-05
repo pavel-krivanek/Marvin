@@ -8,13 +8,13 @@ createLobby
 	lobby := MarvinPrototype new.
 
 	globals := MarvinPrototype new.
-	globals AddReadSlot: #lobby value: lobby.
-	globals AddReadSlot: #nil value: nil.
-	globals AddReadSlot: #true value: true.
-	globals AddReadSlot: #false value: false.
+	globals _AddReadSlot: #lobby value: lobby.
+	globals _AddReadSlot: #nil value: nil.
+	globals _AddReadSlot: #true value: true.
+	globals _AddReadSlot: #false value: false.
 
-	lobby AddParentSlot: #globals value: globals.
+	lobby _AddParentSlot: #globals value: globals.
 
-	lobby AddMethodSlot: #DoIt value: CompiledMethod toReturnSelf.
-	lobby AddMethodSlot: #slotNotFound: value: (MarvinPrototype class >> #lobbyDNU:).
-	lobby AddMethodSlot: #St: value: (MarvinPrototype class >> #SmalltalkObject:).
+	lobby _AddMethodSlot: #DoIt value: CompiledMethod toReturnSelf.
+	lobby _AddMethodSlot: #slotNotFound: value: (MarvinPrototype class >> #lobbyDNU:).
+	lobby _AddMethodSlot: #St: value: (MarvinPrototype class >> #SmalltalkObject:).

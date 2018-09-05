@@ -3,7 +3,7 @@ printString
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #printString) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #printString) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ 'aMarvinPrototype' ]

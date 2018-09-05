@@ -4,7 +4,7 @@ inspect
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #inspect) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #inspect) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ Smalltalk tools inspector inspect: self ]

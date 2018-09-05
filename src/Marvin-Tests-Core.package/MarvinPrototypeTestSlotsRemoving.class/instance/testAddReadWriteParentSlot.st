@@ -4,8 +4,8 @@ testAddReadWriteParentSlot
 	|  parent |
 	
 	parent := MarvinPrototype new.
-	object AddReadWriteParentSlot: #parent value: parent.
-	object RemoveSlot: #parent.
+	object _AddReadWriteParentSlot: #parent value: parent.
+	object _RemoveSlot: #parent.
 
 	self checkArrayContent.
 

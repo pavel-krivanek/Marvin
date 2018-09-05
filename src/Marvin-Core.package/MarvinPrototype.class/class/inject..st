@@ -4,5 +4,5 @@ inject: anObject
 	| newObject |
 	
 	newObject := MarvinPrototype new.
-	^ newObject Inject: anObject
+	^ newObject _Inject: anObject
 	

@@ -5,7 +5,7 @@ testAddReadWriteParentSlot
 	
 	parent := MarvinPrototype new.
 	parent2 := MarvinPrototype new.
-	object AddReadWriteParentSlot: #parent value: parent.
+	object _AddReadWriteParentSlot: #parent value: parent.
 
 	self assert: object parent equals: parent.
 	self assert: (object parent: parent2) equals: object.

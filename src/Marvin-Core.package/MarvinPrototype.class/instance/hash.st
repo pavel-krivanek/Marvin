@@ -3,7 +3,7 @@ hash
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #hash) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #hash) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ self identityHash ]

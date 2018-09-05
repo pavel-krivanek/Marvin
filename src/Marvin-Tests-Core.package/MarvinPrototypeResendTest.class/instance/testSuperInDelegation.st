@@ -1,6 +1,6 @@
 tests
 testSuperInDelegation
 
-	parent AddMethod: 'doIt ^ super'.
+	parent _AddMethod: 'doIt ^ super'.
 
 	self assert: object doIt equals: object.

@@ -3,7 +3,7 @@ doesNotUnderstand: aMessage
 
 	| result |
 	
-	result := self PerformMessage: aMessage inContextOf: self.
+	result := self _PerformMessage: aMessage inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ self slotNotFound: aMessage. ]

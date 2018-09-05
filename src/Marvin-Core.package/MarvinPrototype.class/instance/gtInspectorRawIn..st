@@ -4,7 +4,7 @@ gtInspectorRawIn: composite
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #gtInspectorRawIn: argument: composite) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #gtInspectorRawIn: argument: composite) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ composite custom: GTObjectVariablesBrowser new ]

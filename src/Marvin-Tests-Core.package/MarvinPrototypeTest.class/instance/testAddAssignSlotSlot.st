@@ -1,7 +1,7 @@
 tests
 testAddAssignSlotSlot
 
-	object AddAssignSlot: #data value: 42.
+	object _AddAssignSlot: #data value: 42.
 
 	self assert: object data equals: 42.
 	self assert: (object data: 12) equals: object.

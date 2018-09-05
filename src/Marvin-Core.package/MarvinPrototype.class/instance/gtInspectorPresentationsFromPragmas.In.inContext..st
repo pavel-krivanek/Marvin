@@ -16,7 +16,7 @@ gtInspectorPresentationsFromPragmas: aCollection In: composite inContext: aGTIns
 					
 					aMessage := Message selector: eachPragma methodSelector arguments: {composite}.
 
-					result := self PerformMessage: aMessage inContextOf: self.
+					result := self _PerformMessage: aMessage inContextOf: self.
 					(result = MarvinPrototype DNU) ifTrue: [ thisContext
 						object: self
 						perform: eachPragma methodSelector

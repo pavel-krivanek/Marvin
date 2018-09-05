@@ -7,7 +7,7 @@ gtInspectorVariableNodesIn: aCollection
 	
 	indexableDisplayLimit := GTInspector indexableDisplayLimit.        
 	top := 1.
-	bottom := self PrimitiveSize.
+	bottom := self _PrimitiveSize.
 	topLimit    := indexableDisplayLimit min: bottom.
 	bottomLimit := indexableDisplayLimit max: (bottom - indexableDisplayLimit).
 

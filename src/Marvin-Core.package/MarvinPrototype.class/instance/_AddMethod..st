@@ -1,5 +1,5 @@
 slots
-AddMethod: aSourceCode
+_AddMethod: aSourceCode
 
 	| compiledMethod |
 	
@@ -11,4 +11,4 @@ AddMethod: aSourceCode
 		
 	compiledMethod propertyAt: #owningObject put: self.
 	
-	^ self AddMethodSlot: compiledMethod selector value: compiledMethod
+	^ self _AddMethodSlot: compiledMethod selector value: compiledMethod

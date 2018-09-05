@@ -7,15 +7,15 @@ setUp
 	parent2 := MarvinPrototype new.
 
 	object := MarvinPrototype new: 2.
-	object PrimitiveAt: 1 put: 1.
-	object PrimitiveAt: 2 put: 2.
+	object _PrimitiveAt: 1 put: 1.
+	object _PrimitiveAt: 2 put: 2.
 	
-	object AddParentSlot: #builtInParent value: parent.
-	object AddReadWriteParentSlot: #builtInParent2 value: parent2.
+	object _AddParentSlot: #builtInParent value: parent.
+	object _AddReadWriteParentSlot: #builtInParent2 value: parent2.
 
 	compiledMethod := CompiledMethod toReturnSelf.
-	object AddMethodSlot: #builtInMethod value: compiledMethod.
+	object _AddMethodSlot: #builtInMethod value: compiledMethod.
 
-	object AddReadSlot: #builtInData value: 42.
-	object AddAssignSlot: #builtInData2 value: 7.
+	object _AddReadSlot: #builtInData value: 42.
+	object _AddAssignSlot: #builtInData2 value: 7.
 

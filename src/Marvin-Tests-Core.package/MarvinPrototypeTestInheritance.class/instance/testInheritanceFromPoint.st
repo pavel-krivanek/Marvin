@@ -1,7 +1,7 @@
 tests
 testInheritanceFromPoint
 
-	object AddInheritance: #parent from: Point.
+	object _AddInheritance: #parent from: Point.
 	object setX: 0 setY: 0.
 	
 	self assert: object x equals: 0.

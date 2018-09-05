@@ -1,10 +1,10 @@
 tests
 testResendHiddenReadSlot
 
-	parent AddReadSlot: #data value: 42.
-	parent AddReadSlot: #data value: 1.
+	parent _AddReadSlot: #data value: 42.
+	parent _AddReadSlot: #data value: 1.
 
-	object AddMethod: 'doIt ^ super data'.
+	object _AddMethod: 'doIt ^ super data'.
 
 	self assert: object data equals: 42.
 	

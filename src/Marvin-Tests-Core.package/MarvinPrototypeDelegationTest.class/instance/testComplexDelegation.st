@@ -5,20 +5,20 @@ testComplexDelegation
 
 	parent := MarvinPrototype new.
 	object := MarvinPrototype new.
-	object AddParentSlot: #parent value: parent.
+	object _AddParentSlot: #parent value: parent.
 	
 	innerParent := MarvinPrototype new.
-	innerParent AddMethod: 'a ^ self a'.
-	innerParent AddReadSlot: #b value: 1.
+	innerParent _AddMethod: 'a ^ self a'.
+	innerParent _AddReadSlot: #b value: 1.
 	
-	parent AddParentSlot: #parent value: innerParent.
-	parent AddMethod: 'a ^ super a'.
+	parent _AddParentSlot: #parent value: innerParent.
+	parent _AddMethod: 'a ^ super a'.
 	
 	innerObject := 	MarvinPrototype new.
-	innerObject AddReadSlot: #a value: 3.
-	innerObject AddReadSlot: #b value: 4.
+	innerObject _AddReadSlot: #a value: 3.
+	innerObject _AddReadSlot: #b value: 4.
 
-	object AddReadSlot: #a value: innerObject.
-	object AddMethod: 'method ^ super a a'.
+	object _AddReadSlot: #a value: innerObject.
+	object _AddMethod: 'method ^ super a a'.
 	
 	self assert: object method equals: 3.

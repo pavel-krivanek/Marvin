@@ -3,7 +3,7 @@ support
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #~= argument: anObject) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #~= argument: anObject) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ self = anObject == false ]

@@ -5,4 +5,4 @@ setUp
 
 	parent := MarvinPrototype new.
 	object := MarvinPrototype new.
-	object AddParentSlot: #parent value: parent.
+	object _AddParentSlot: #parent value: parent.

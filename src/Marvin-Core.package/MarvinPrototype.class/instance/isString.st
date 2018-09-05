@@ -3,7 +3,7 @@ isString
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #isString) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #isString) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ false]

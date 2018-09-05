@@ -3,7 +3,7 @@ isKindOf: aClass
 
 	| result |
 	
-	result := self PerformMessage: (Message selector: #isKindOf argument: aClass) inContextOf: self.
+	result := self _PerformMessage: (Message selector: #isKindOf argument: aClass) inContextOf: self.
 	
 	^ result == MarvinPrototype DNU 
 		ifTrue: [ self class == aClass

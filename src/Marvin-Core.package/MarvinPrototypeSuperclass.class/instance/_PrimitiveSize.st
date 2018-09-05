@@ -1,5 +1,5 @@
 reflective operations
-PrimitiveSize
+_PrimitiveSize
 
 	<primitive: 62>
 	^ 0

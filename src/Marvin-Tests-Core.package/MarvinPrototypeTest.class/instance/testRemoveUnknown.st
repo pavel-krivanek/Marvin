@@ -1,5 +1,5 @@
 tests
 testRemoveUnknown
 
-	self should: [ object RemoveSlot: #data ] raise: MessageNotUnderstood. 
+	self should: [ object _RemoveSlot: #data ] raise: MessageNotUnderstood. 
 	

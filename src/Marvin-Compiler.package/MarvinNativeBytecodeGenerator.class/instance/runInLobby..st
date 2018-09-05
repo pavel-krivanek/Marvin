@@ -5,9 +5,9 @@ runInLobby: method
 
 	lobby := MarvinPrototype lobby.
 
-	lobby RemoveSlot: #DoIt.
+	lobby _RemoveSlot: #DoIt.
 	
-	lobby AddMethodSlot: #DoIt value: method.
+	lobby _AddMethodSlot: #DoIt value: method.
 
 	^ lobby DoIt
 

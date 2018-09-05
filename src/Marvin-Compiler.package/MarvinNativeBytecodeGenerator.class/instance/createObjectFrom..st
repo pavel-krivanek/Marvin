@@ -18,7 +18,7 @@ createObjectFrom: literal
 						methodLiteral context: slot content.
 						method := gen methodFrom: methodLiteral owner: object.
 						val := gen runInLobby: method. ].
-				object AddReadSlot: slot name asSymbol value:  val.
+				object _AddReadSlot: slot name asSymbol value:  val.
 			].
 
 		slot type = #assignSlot
@@ -33,7 +33,7 @@ createObjectFrom: literal
 						methodLiteral context: slot content.
 						method := gen methodFrom: methodLiteral owner: object.
 						val := gen runInLobby: method. ].
-				object AddAssignSlot: slot name asSymbol value:  val.
+				object _AddAssignSlot: slot name asSymbol value:  val.
 			].
 
 		slot type = #methodSlot
@@ -44,7 +44,7 @@ createObjectFrom: literal
 						| methodLiteral |
 						methodLiteral := slot content.
 						method := MarvinNativeBytecodeGenerator new methodFrom: methodLiteral owner: object. ].
-				object AddMethodSlot: slot name asSymbol value:  method.
+				object _AddMethodSlot: slot name asSymbol value:  method.
 			].
 		((slot type = #parentSlot) | (slot type = #readWriteParentSlot))
 			ifTrue: [ 	
@@ -60,8 +60,8 @@ createObjectFrom: literal
 						method := gen methodFrom: methodLiteral owner: object..
 						val := gen runInLobby: method. ].
 				slot type = #parentSlot
-					ifTrue: [ object AddParentSlot: slot name allButLast asSymbol value:  val]
-					ifFalse: [ object AddReadWriteParentSlot: slot name allButLast asSymbol value:  val ].
+					ifTrue: [ object _AddParentSlot: slot name allButLast asSymbol value:  val]
+					ifFalse: [ object _AddReadWriteParentSlot: slot name allButLast asSymbol value:  val ].
 			]
 	 ].
 
